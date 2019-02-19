@@ -94,10 +94,8 @@ jobs:
             if [ $CIRCLE_BRANCH != $GITHUB_PAGE_DEFAULT_BRANCH ]; then
               git checkout $GITHUB_PAGE_DEFAULT_BRANCH
               git merge $CIRCLE_BRANCH
-              # for test
-              git log
-              echo "git push upstream $GITHUB_PAGE_DEFAULT_BRANCH"
-              echo "git push upstream :$CIRCLE_BRANCH"
+              git push upstream $GITHUB_PAGE_DEFAULT_BRANCH
+              git push upstream :$CIRCLE_BRANCH
             fi
           when: always
 
