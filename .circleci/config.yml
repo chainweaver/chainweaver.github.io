@@ -95,7 +95,6 @@ jobs:
               git checkout $GITHUB_PAGE_DEFAULT_BRANCH
               git merge $CIRCLE_BRANCH
               git push upstream $GITHUB_PAGE_DEFAULT_BRANCH
-              git push upstream :$CIRCLE_BRANCH || true
             fi
           when: always
 
@@ -120,6 +119,19 @@ jobs:
             if [ `heroku apps | grep $HEROKU_APP_ID | wc -l` != 0 ]; then
               heroku apps:destroy $HEROKU_APP_ID --confirm $HEROKU_APP_ID
             fi
+
+  delete-branch:
+    machine:
+      image: circleci/classic:edge
+    steps:
+      - checkout
+      - run:
+          name: Delete branch
+          command: |
+            git config --global user.email "$GIT_USER_EMAIL"
+            git config --global user.name "$GIT_USER"
+            git remote add upstream https://$GITHUB_ACCESS_TOKEN@github.com/chainweaver/chainweaver.github.io.git
+            git push upstream :$CIRCLE_BRANCH || true
 
 workflows:
   version: 2
@@ -151,6 +163,12 @@ workflows:
       - undeploy-heroku:
           requires:
             - deploy-website
+          filters:
+            tags:
+              only: /.*/
+      - delete-branch:
+          requires:
+            - undeploy-heroku
           filters:
             tags:
               only: /.*/
