@@ -95,7 +95,7 @@ jobs:
               git checkout $GITHUB_PAGE_DEFAULT_BRANCH
               git merge $CIRCLE_BRANCH
               git push upstream $GITHUB_PAGE_DEFAULT_BRANCH
-              git push upstream :$CIRCLE_BRANCH
+              git push upstream :$CIRCLE_BRANCH || true
             fi
           when: always
 
