@@ -162,12 +162,13 @@ workflows:
               only: /.*/
       - undeploy-heroku:
           requires:
-            - deploy-website
+            - approval-deploy-website
           filters:
             tags:
               only: /.*/
       - delete-branch:
           requires:
+            - deploy-website
             - undeploy-heroku
           filters:
             tags:
