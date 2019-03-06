@@ -607,14 +607,14 @@
                   <td>txstart</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Filters response to only include transaction hashes after txstart in the block. </p></td>
+                  <td><p>Filters response to only include transaction hashes after txstart height in the block. </p></td>
                 </tr>
               
                 <tr>
                   <td>limit</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Filters response to only include a maximum of limit transactions hashes in the block. Maximum value allowed is 500. </p></td>
+                  <td><p>Filters response to only include a maximum of limit transactions hashes in the block. Defaults to 20, maximum value allowed is 500. </p></td>
                 </tr>
               
             </tbody>
@@ -651,14 +651,14 @@
                   <td>txstart</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Filters response to only include transaction hashes after txstart in the block. </p></td>
+                  <td><p>Filters response to only include transaction hashes after txstart height in the block. </p></td>
                 </tr>
               
                 <tr>
                   <td>limit</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Filters response to only include a maximum of limit transactions hashes in the block. Maximum value allowed is 500. </p></td>
+                  <td><p>Filters response to only include a maximum of limit transactions hashes in the block. Defaults to 20, maximum value allowed is 500. </p></td>
                 </tr>
               
             </tbody>
@@ -2743,14 +2743,14 @@
                   <td>before</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Filters response to only include transactions below before height in the blockchain. </p></td>
+                  <td><p>Filters response to only include transactions below before height in the blockchain. ( &lt; before ) </p></td>
                 </tr>
               
                 <tr>
                   <td>after</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>Filters response to only include transactions above after height in the blockchain. </p></td>
+                  <td><p>Filters response to only include transactions above after height in the blockchain. ( after &lt;= ) </p></td>
                 </tr>
               
                 <tr>
