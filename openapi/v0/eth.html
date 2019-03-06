@@ -1520,7 +1520,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 	  	<ul class="toc-list-h1">
         
           <li>
-            <a href="#chainweaver-api-for-ethereum" class="toc-h1 toc-link" data-title="Chainweaver API for Ethereum v0.1.0">Chainweaver API for Ethereum v0.1.0</a>
+            <a href="#chainweaver-api-for-ethereum" class="toc-h1 toc-link" data-title="Chainweaver API for Ethereum v0.2.0">Chainweaver API for Ethereum v0.2.0</a>
             
           </li>
         
@@ -1530,7 +1530,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
           </li>
         
           <li>
-            <a href="#chainweaver-api-for-ethereum-addressservice" class="toc-h1 toc-link" data-title="AddressService">AddressService</a>
+            <a href="#chainweaver-api-for-ethereum-address-api" class="toc-h1 toc-link" data-title="Address API">Address API</a>
             
               <ul class="toc-list-h2">
                 
@@ -1814,7 +1814,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="chainweaver-api-for-ethereum">Chainweaver API for Ethereum v0.1.0</h1>
+        <h1 id="chainweaver-api-for-ethereum">Chainweaver API for Ethereum v0.2.0</h1>
 <blockquote>
 <p>Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.</p>
 </blockquote>
@@ -1838,7 +1838,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 </ul>
 </li>
 </ul>
-<h1 id="chainweaver-api-for-ethereum-addressservice">AddressService</h1>
+<h1 id="chainweaver-api-for-ethereum-address-api">Address API</h1>
 <h2 id="generateaddressendpoint">GenerateAddressEndpoint</h2>
 <p><a id="opIdGenerateAddressEndpoint"></a></p>
 <blockquote>
@@ -1966,6 +1966,8 @@ System.out.println(response.toString());
 
 </code></pre>
 <p><code>POST /eth/{network}/addrs</code></p>
+<p><em>Generate Address Endpoint</em></p>
+<p>The Generate Address endpoint allows you to generate private-public key-pairs along with an associated public address. No information is required with this POST request. The returned object contains a private key, a public key, and a public address, all hex-encoded.<aside class="notice">The private key returned is immediately discarded by our servers, but we advise that these keys should not be used for any high-value—or long-term storage—addresses.</aside></p>
 <blockquote>
 <p>Body parameter</p>
 </blockquote>
@@ -2056,6 +2058,12 @@ System.out.println(response.toString());
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
 <td>A successful response.</td>
+<td><a href="#schemaethaddresskeychain">ethAddressKeychain</a></td>
+</tr>
+<tr>
+<td>201</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.2">Created</a></td>
+<td>Created</td>
 <td><a href="#schemaethaddresskeychain">ethAddressKeychain</a></td>
 </tr>
 </tbody>
@@ -2182,6 +2190,8 @@ System.out.println(response.toString());
 
 </code></pre>
 <p><code>GET /eth/{network}/addrs/{address}</code></p>
+<p><em>Address Endpoint</em></p>
+<p>The Address Endpoint returns more information about an address’ transactions than the Address Balance Endpoint, but sacrifices some response speed in the process. The returned object contains information about the address, including its balance in wei, the number of transactions associated with it, and transaction summaries in descending order by block height.</p>
 <h3 id="addressendpoint-parameters">Parameters</h3>
 <table>
 <thead>
@@ -2213,14 +2223,14 @@ System.out.println(response.toString());
 <td>query</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Filters response to only include transactions below before height in the blockchain.</td>
+<td>Filters response to only include transactions below before height in the blockchain. ( &lt; before ).</td>
 </tr>
 <tr>
 <td>after</td>
 <td>query</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Filters response to only include transactions above after height in the blockchain.</td>
+<td>Filters response to only include transactions above after height in the blockchain. ( after &lt;= ).</td>
 </tr>
 <tr>
 <td>limit</td>
@@ -2327,7 +2337,7 @@ System.out.println(response.toString());
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>A successful response.</td>
+<td>Success OK</td>
 <td><a href="#schemaethaddress">ethAddress</a></td>
 </tr>
 </tbody>
@@ -2454,6 +2464,8 @@ System.out.println(response.toString());
 
 </code></pre>
 <p><code>GET /eth/{network}/addrs/{address}/balance</code></p>
+<p><em>Address Balance Endpoint</em></p>
+<p>The Address Balance Endpoint is the simplest—and fastest—method to get a subset of information on a public address. The returned object contains information about the address, including its balance in wei and the number of transactions associated with it. The endpoint omits any detailed transaction information, but if that isn’t required by your application, then it’s the fastest and preferred way to get public address information.</p>
 <h3 id="addressbalanceendpoint-parameters">Parameters</h3>
 <table>
 <thead>
@@ -2571,7 +2583,7 @@ System.out.println(response.toString());
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>A successful response.</td>
+<td>Success OK</td>
 <td><a href="#schemaethaddress">ethAddress</a></td>
 </tr>
 </tbody>
@@ -2945,14 +2957,14 @@ System.out.println(response.toString());
 <td>query</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Filters response to only include transaction hashes after txstart in the block.</td>
+<td>Filters response to only include transaction hashes after txstart height in the block.</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>query</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Filters response to only include a maximum of limit transactions hashes in the block. Maximum value allowed is 500.</td>
+<td>Filters response to only include a maximum of limit transactions hashes in the block. Defaults to 20, maximum value allowed is 500.</td>
 </tr>
 </tbody>
 </table>
@@ -3201,14 +3213,14 @@ System.out.println(response.toString());
 <td>query</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Filters response to only include transaction hashes after txstart in the block.</td>
+<td>Filters response to only include transaction hashes after txstart height in the block.</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>query</td>
 <td>integer(int32)</td>
 <td>false</td>
-<td>Filters response to only include a maximum of limit transactions hashes in the block. Maximum value allowed is 500.</td>
+<td>Filters response to only include a maximum of limit transactions hashes in the block. Defaults to 20, maximum value allowed is 500.</td>
 </tr>
 </tbody>
 </table>
@@ -6876,63 +6888,63 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tr>
 <td>address</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>The requested address.</td>
 </tr>
 <tr>
 <td>total_received</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Total amount of confirmed wei received by this address.</td>
 </tr>
 <tr>
 <td>total_sent</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Total amount of confirmed wei sent by this address.</td>
 </tr>
 <tr>
 <td>balance</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Balance of confirmed wei on this address. (i.e., for transactions whose confirmations &gt; 0).</td>
 </tr>
 <tr>
 <td>unconfirmed_balance</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Balance of unconfirmed wei on this address. Can be negative (if unconfirmed transactions are just spending part of an address balance). Only unconfirmed transactions (haven’t made it into a block) are included in this calculation.</td>
 </tr>
 <tr>
 <td>final_balance</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Total balance of wei, including confirmed and unconfirmed transactions, for this address.</td>
 </tr>
 <tr>
 <td>n_tx</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Number of confirmed transactions on this address. Only transactions that have made it into a block (confirmations &gt; 0) are counted.</td>
 </tr>
 <tr>
 <td>unconfirmed_n_tx</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Number of unconfirmed transactions for this address. Only unconfirmed transactions (confirmations == 0) are counted.</td>
 </tr>
 <tr>
 <td>final_n_tx</td>
 <td>integer(int64)</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Final number of transactions, including confirmed and unconfirmed transactions, for this address.</td>
 </tr>
@@ -6990,21 +7002,21 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tr>
 <td>address</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Standard address representation.</td>
 </tr>
 <tr>
 <td>public</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Hex-encoded Public key.</td>
 </tr>
 <tr>
 <td>private</td>
 <td>string</td>
-<td>false</td>
+<td>true</td>
 <td>none</td>
 <td>Hex-encoded Private key.</td>
 </tr>
