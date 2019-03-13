@@ -1520,7 +1520,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 	  	<ul class="toc-list-h1">
         
           <li>
-            <a href="#chainweaver-api-for-bitcoin" class="toc-h1 toc-link" data-title="Chainweaver API for Bitcoin v0.2.0">Chainweaver API for Bitcoin v0.2.0</a>
+            <a href="#chainweaver-api-for-bitcoin" class="toc-h1 toc-link" data-title="Chainweaver API for Bitcoin v0.3.0">Chainweaver API for Bitcoin v0.3.0</a>
             
           </li>
         
@@ -2223,7 +2223,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="chainweaver-api-for-bitcoin">Chainweaver API for Bitcoin v0.2.0</h1>
+        <h1 id="chainweaver-api-for-bitcoin">Chainweaver API for Bitcoin v0.3.0</h1>
 <blockquote>
 <p>Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.</p>
 </blockquote>
@@ -2645,63 +2645,63 @@ System.out.println(response.toString());
 <tr>
 <td>unspentOnly</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If unspentOnly is true, filters response to only include unspent transaction outputs (UTXOs).</td>
 </tr>
 <tr>
 <td>includeScript</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If includeScript is true, includes raw script of input or output within returned TXRefs.</td>
 </tr>
 <tr>
 <td>includeConfidence</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If true, includes the confidence attribute (useful for unconfirmed transactions) within returned TXRefs. For more info about this figure, check the Confidence Factor documentation.</td>
 </tr>
 <tr>
 <td>before</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters response to only include transactions below before height in the blockchain.</td>
 </tr>
 <tr>
 <td>after</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters response to only include transactions above after height in the blockchain.</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>limit sets the minimum number of returned TXRefs; there can be less if there are less than limit TXRefs associated with this address, but there can be more in the rare case of more TXRefs in the block at the bottom of your call. This ensures paging by block height never misses TXRefs. Defaults to 200, maximum is 2000.</td>
 </tr>
 <tr>
 <td>confirmations</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>If set, only returns the balance and TXRefs that have at least this number of confirmations.</td>
 </tr>
 <tr>
 <td>confidence</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters response to only include TXRefs above confidence in percent; e.g., if this is set to 99, will only return TXRefs with 99% confidence or above (including all confirmed TXRefs). For more detail on confidence, check the Confidence Factor documentation.</td>
 </tr>
 <tr>
 <td>omitWalletAddresses</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If omitWalletAddresses is true and you’re querying a Wallet or HDWallet, the response will omit address information (useful to speed up the API call for larger wallets).</td>
 </tr>
@@ -3058,7 +3058,7 @@ System.out.println(response.toString());
 <tr>
 <td>omitWalletAddresses</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If omitWalletAddresses is true and you’re querying a Wallet or HDWallet, the response will omit address information (useful to speed up the API call for larger wallets).</td>
 </tr>
@@ -3415,63 +3415,63 @@ System.out.println(response.toString());
 <tr>
 <td>before</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters response to only include transactions below before height in the blockchain.</td>
 </tr>
 <tr>
 <td>after</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters response to only include transactions above after height in the blockchain.</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>limit sets the minimum number of returned TXs; there can be less if there are less than limit TXs associated with this address, but there can also be more in the rare case of more TXs in the block at the bottom of your call. This ensures paging by block height never misses TXs. Defaults to 10, maximum is 50.</td>
 </tr>
 <tr>
 <td>txlimit</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>This filters the TXInputs/TXOutputs within the returned TXs to include a maximum of txlimit items.</td>
 </tr>
 <tr>
 <td>confirmations</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>If set, only returns the balance and TXs that have at least this number of confirmations.</td>
 </tr>
 <tr>
 <td>confidence</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters response to only include TXs above confidence in percent; e.g., if this is set to 99, will only return TXs with 99% confidence or above (including all confirmed TXs). For more detail on confidence, check the Confidence Factor documentation.</td>
 </tr>
 <tr>
 <td>includeHex</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If true, includes hex-encoded raw transaction for each TX; false by default.</td>
 </tr>
 <tr>
 <td>includeConfidence</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If true, includes the confidence attribute (useful for unconfirmed transactions) within returned TXs. For more info about this figure, check the Confidence Factor documentation.</td>
 </tr>
 <tr>
 <td>omitWalletAddresses</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If omitWalletAddresses is true and you’re querying a Wallet or HDWallet, the response will omit address information (useful to speed up the API call for larger wallets).</td>
 </tr>
@@ -3822,7 +3822,7 @@ System.out.println(response.toString());
 <tr>
 <td>start</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Returns list of address forwards starting at the start index; useful for paging beyond the limit of 200 address forwards.</td>
 </tr>
@@ -4737,7 +4737,7 @@ System.out.println(response.toString());
 <tr>
 <td>page</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 </tr>
@@ -6918,14 +6918,14 @@ System.out.println(response.toString());
 <tr>
 <td>txstart</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 </tr>
@@ -7152,21 +7152,21 @@ System.out.println(response.toString());
 <tr>
 <td>block_height</td>
 <td>path</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>true</td>
 <td>none</td>
 </tr>
 <tr>
 <td>txstart</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 </tr>
 <tr>
 <td>limit</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 </tr>
@@ -7822,7 +7822,7 @@ System.out.println(response.toString());
 <tr>
 <td>private</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If private is true, it will return privately stored metadata under your token. Otherwise, returns public metadata. If not set, it defaults to false, returning public data.</td>
 </tr>
@@ -8480,7 +8480,7 @@ System.out.println(response.toString());
 <tr>
 <td>private</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If private is true, it will return privately stored metadata under your token. Otherwise, returns public metadata. If not set, it defaults to false, returning public data.</td>
 </tr>
@@ -9138,7 +9138,7 @@ System.out.println(response.toString());
 <tr>
 <td>private</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If private is true, it will return privately stored metadata under your token. Otherwise, returns public metadata. If not set, it defaults to false, returning public data.</td>
 </tr>
@@ -12071,35 +12071,35 @@ System.out.println(response.toString());
 <tr>
 <td>limit</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters TXInputs/TXOutputs, if unset, default is 20.</td>
 </tr>
 <tr>
 <td>instart</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters TX to only include TXInputs from this input index and above.</td>
 </tr>
 <tr>
 <td>outstart</td>
 <td>query</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>Filters TX to only include TXOutputs from this output index and above.</td>
 </tr>
 <tr>
 <td>includeHex</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If true, includes hex-encoded raw transaction; false by default.</td>
 </tr>
 <tr>
 <td>includeConfidence</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>If true, includes the confidence attribute (useful for unconfirmed transactions). For more info about this figure, check the Confidence Factor documentation.</td>
 </tr>
@@ -13729,14 +13729,14 @@ System.out.println(response.toString());
 <tr>
 <td>used</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>Returns only used addresses if set to true and only unused if false. Only valid on HD wallets.</td>
 </tr>
 <tr>
 <td>zerobalance</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>Returns only addresses with zero balance if set to true and only addresses with non-zero balance if false. Only valid on HD wallets.</td>
 </tr>
@@ -14622,14 +14622,14 @@ System.out.println(response.toString());
 <tr>
 <td>used</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>Returns only used addresses if set to true and only unused if false. Only valid on HD wallets.</td>
 </tr>
 <tr>
 <td>zerobalance</td>
 <td>query</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>Returns only addresses with zero balance if set to true and only addresses with non-zero balance if false. Only valid on HD wallets.</td>
 </tr>
@@ -16471,56 +16471,56 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>total_received</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total amount of confirmed satoshis received by this address.</td>
 </tr>
 <tr>
 <td>total_sent</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total amount of confirmed satoshis sent by this address.</td>
 </tr>
 <tr>
 <td>balance</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Balance of confirmed satoshis on this address. This is the difference between outputs and inputs on this address, but only for transactions that have been included into a block (i.e., for transactions whose confirmations &gt; 0).</td>
 </tr>
 <tr>
 <td>unconfirmed_balance</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Balance of unconfirmed satoshis on this address. Can be negative (if unconfirmed transactions are just spending outputs). Only unconfirmed transactions (haven’t made it into a block) are included.</td>
 </tr>
 <tr>
 <td>final_balance</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total balance of satoshis, including confirmed and unconfirmed transactions, for this address.</td>
 </tr>
 <tr>
 <td>n_tx</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of confirmed transactions on this address. Only transactions that have made it into a block (confirmations &gt; 0) are counted.</td>
 </tr>
 <tr>
 <td>unconfirmed_n_tx</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of unconfirmed transactions for this address. Only unconfirmed transactions (confirmations == 0) are counted.</td>
 </tr>
 <tr>
 <td>final_n_tx</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Final number of transactions, including confirmed and unconfirmed transactions, for this address.</td>
@@ -16555,7 +16555,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>hasMore</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional If true, then the Address object contains more transactions than shown. Useful for determining whether to poll the API for more transaction information.</td>
@@ -16821,7 +16821,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>index</td>
-<td>string(int64)</td>
+<td>string</td>
 <td>false</td>
 <td>none</td>
 <td>optional Index of the subchain, returned if the wallet has subchains.</td>
@@ -16888,7 +16888,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>hd</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true for HD wallets, not present for normal wallets.</td>
@@ -17040,7 +17040,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tbody>
 <tr>
 <td>block_height</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Height of the block that contains this transaction. If this is an unconfirmed transaction, it will equal -1.</td>
@@ -17061,21 +17061,21 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>total</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The total number of satoshis exchanged in this transaction.</td>
 </tr>
 <tr>
 <td>fees</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The total number of fees—in satoshis—collected by miners in this transaction.</td>
 </tr>
 <tr>
 <td>size</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The size of the transaction in bytes.</td>
@@ -17103,42 +17103,42 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>ver</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Version number, typically 1 for Bitcoin transactions.</td>
 </tr>
 <tr>
 <td>lock_time</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Time when transaction can be valid. Can be interpreted in two ways: if less than 500 million, refers to block height. If more, refers to Unix epoch time.</td>
 </tr>
 <tr>
 <td>double_spend</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this is an attempted double spend; false otherwise.</td>
 </tr>
 <tr>
 <td>vin_sz</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total number of inputs in the transaction.</td>
 </tr>
 <tr>
 <td>vout_sz</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total number of outputs in the transaction.</td>
 </tr>
 <tr>
 <td>confirmations</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of subsequent blocks, including the block the transaction is in. Unconfirmed transactions have 0 confirmations.</td>
@@ -17159,7 +17159,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>opt_in_rbf</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Returns true if this transaction has opted in to Replace-By-Fee (RBF), either true or not present. You can read more about Opt-In RBF here.</td>
@@ -17180,7 +17180,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>receive_count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Number of peers that have sent this transaction to Block; only present for unconfirmed transactions.</td>
@@ -17201,7 +17201,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>block_index</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Canonical, zero-indexed location of this transaction in a block; only present for confirmed transactions.</td>
@@ -17282,14 +17282,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>output_index</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The index of the output being spent within the previous transaction. Not present for coinbase transactions.</td>
 </tr>
 <tr>
 <td>output_value</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The value of the output being spent within the previous transaction. Not present for coinbase transactions.</td>
@@ -17317,14 +17317,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>sequence</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Legacy 4-byte sequence number, not usually relevant unless dealing with locktime encumbrances.</td>
 </tr>
 <tr>
 <td>age</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Number of confirmations of the previous transaction for which this input was an output. Currently, only returned in unconfirmed transactions.</td>
@@ -17374,7 +17374,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tbody>
 <tr>
 <td>value</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Value in this transaction output, in satoshis.</td>
@@ -17468,7 +17468,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>block_height</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Height of the block that contains this transaction input/output. If it’s unconfirmed, this will equal -1.</td>
@@ -17482,21 +17482,21 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>tx_input_n</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Index of this input in the enclosing transaction. It’s a negative number for an output.</td>
 </tr>
 <tr>
 <td>tx_output_n</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Index of this output in the enclosing transaction. It’s a negative number for an input.</td>
 </tr>
 <tr>
 <td>value</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The value transfered by this input/output in satoshis exchanged in the enclosing transaction.</td>
@@ -17510,21 +17510,21 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>spent</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this is an output and was spent. If it’s an input, or an unspent output, it will be false.</td>
 </tr>
 <tr>
 <td>double_spend</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this is an attempted double spend; false otherwise.</td>
 </tr>
 <tr>
 <td>confirmations</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of subsequent blocks, including the block the transaction is in. Unconfirmed transactions have 0 confirmations.</td>
@@ -17538,7 +17538,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>ref_balance</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional The past balance of the parent address the moment this transaction was confirmed. Not present for unconfirmed transactions.</td>
@@ -17573,7 +17573,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>receive_count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Number of peers that have sent this transaction to Block; only present for unconfirmed transactions.</td>
@@ -17701,7 +17701,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>process_fees_satoshis</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Fixed processing fee amount to be sent to the fee address. A fixed satoshi amount or a percentage is required if a process_fees_address has been specified.</td>
@@ -17722,14 +17722,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>enable_confirmations</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Whether to also call the callback_url with subsequent confirmations of the forwarding transactions. Automatically sets up a WebHook.</td>
 </tr>
 <tr>
 <td>mining_fees_satoshis</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Mining fee amount to include in the forwarding transaction, in satoshis. If not set, defaults to 10,000.</td>
@@ -17863,7 +17863,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>process_fees_satoshis</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Fixed processing fee amount to be sent to the fee address. A fixed satoshi amount or a percentage is required if a process_fees_address has been specified.</td>
@@ -17884,14 +17884,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>enable_confirmations</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Whether to also call the callback_url with subsequent confirmations of the forwarding transactions. Automatically sets up a WebHook.</td>
 </tr>
 <tr>
 <td>mining_fees_satoshis</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Mining fee amount to include in the forwarding transaction, in satoshis. If not set, defaults to 10,000.</td>
@@ -17962,14 +17962,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>value_threshold</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Minimal/threshold value (in satoshis) to query.</td>
 </tr>
 <tr>
 <td>limit</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Limit of results to return.</td>
@@ -17990,7 +17990,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>degree</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Degree of connectiveness to query.</td>
@@ -18069,14 +18069,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>finished</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this job is finished processing, false otherwise.</td>
 </tr>
 <tr>
 <td>started</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this job has begun processing, false otherwise.</td>
@@ -18138,14 +18138,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>value_threshold</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Minimal/threshold value (in satoshis) to query.</td>
 </tr>
 <tr>
 <td>limit</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Limit of results to return.</td>
@@ -18166,7 +18166,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>degree</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Degree of connectiveness to query.</td>
@@ -18225,7 +18225,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>Value</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>none</td>
@@ -18263,14 +18263,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tbody>
 <tr>
 <td>page</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Current page of results.</td>
 </tr>
 <tr>
 <td>more</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if there are more results in a separate page; false otherwise.</td>
@@ -18365,7 +18365,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>amount</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The amount of assets being issued or transfered.</td>
@@ -18412,7 +18412,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tbody>
 <tr>
 <td>ver</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Version of Open Assets Protocol transaction. Typically 1.</td>
@@ -18454,7 +18454,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>double_spend</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this is an attempted double spend; false otherwise.</td>
@@ -18529,7 +18529,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>amount</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The amount of assets being issued or transfered.</td>
@@ -18622,14 +18622,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>height</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The height of the block in the blockchain; i.e., there are height earlier blocks in its blockchain.</td>
 </tr>
 <tr>
 <td>depth</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The depth of the block in the blockchain; i.e., there are depth later blocks in its blockchain.</td>
@@ -18643,28 +18643,28 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>total</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The total number of satoshis transacted in this block.</td>
 </tr>
 <tr>
 <td>fees</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The total number of fees—in satoshis—collected by miners in this block.</td>
 </tr>
 <tr>
 <td>size</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Raw size of block (including header and all transactions) in bytes. Not returned for bitcoin blocks earlier than height 389104.</td>
 </tr>
 <tr>
 <td>ver</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Block version.</td>
@@ -18692,21 +18692,21 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>bits</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The block-encoded difficulty target.</td>
 </tr>
 <tr>
 <td>nonce</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The number used by a miner to generate this block.</td>
 </tr>
 <tr>
 <td>n_tx</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of transactions in this block.</td>
@@ -18796,7 +18796,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>height</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The current height of the blockchain; i.e., the number of blocks in the blockchain.</td>
@@ -18838,42 +18838,42 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>peer_count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>N/A, will be deprecated soon.</td>
 </tr>
 <tr>
 <td>high_fee_per_kb</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>A rolling average of the fee (in satoshis) paid per kilobyte for transactions to be confirmed within 1 to 2 blocks.</td>
 </tr>
 <tr>
 <td>medium_fee_per_kb</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>A rolling average of the fee (in satoshis) paid per kilobyte for transactions to be confirmed within 3 to 6 blocks.</td>
 </tr>
 <tr>
 <td>low_fee_per_kb</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>A rolling average of the fee (in satoshis) paid per kilobyte for transactions to be confirmed in 7 or more blocks.</td>
 </tr>
 <tr>
 <td>unconfirmed_count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of unconfirmed transactions in memory pool (likely to be included in next block).</td>
 </tr>
 <tr>
 <td>last_fork_height</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional The current height of the latest fork to the blockchain; when no competing blockchain fork present, not returned with endpoints that return Blockchains.</td>
@@ -18933,7 +18933,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>last_transition_height</td>
-<td>string(int64)</td>
+<td>string</td>
 <td>false</td>
 <td>none</td>
 <td>none</td>
@@ -18972,14 +18972,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 <tbody>
 <tr>
 <td>age_millis</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The age of the transaction in milliseconds, based on the earliest time BlockCypher saw it relayed in the network.</td>
 </tr>
 <tr>
 <td>receive_count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of peers that have sent this transaction to BlockCypher; only positive for unconfirmed transactions. -1 for confirmed transactions.</td>
@@ -19100,7 +19100,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>private</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>If private is true, it will set/update privately stored metadata under your token. Otherwise, sets public metadata. If not set, it defaults to false, setting public metadata.</td>
@@ -19162,7 +19162,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>private</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>If private is true, it will set/update privately stored metadata under your token. Otherwise, sets public metadata. If not set, it defaults to false, setting public metadata.</td>
@@ -19224,7 +19224,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>private</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>If private is true, it will set/update privately stored metadata under your token. Otherwise, sets public metadata. If not set, it defaults to false, setting public metadata.</td>
@@ -19324,7 +19324,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>value_satoshis</td>
-<td>string(int64)</td>
+<td>string</td>
 <td>false</td>
 <td>none</td>
 <td>Value you’re sending/you’ve sent in satoshis.</td>
@@ -19345,7 +19345,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>wait_guarantee</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional If not set, defaults to true, which means the API will wait for Block to guarantee the transaction, using our Confidence Factor. The guarantee usually takes around 8 seconds. If manually set to false, the Microtransaction endpoint will return as soon as the transaction is broadcast.</td>
@@ -19380,7 +19380,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>fees</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Block’s optimally calculated fees for this MicroTX to guarantee swift 99% confirmation, only returned when using from_pubkey. Block pays these fees for the first 8,000 microtransactions, but like regular transactions, it is deducted from the source address thereafter.</td>
@@ -19495,7 +19495,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>value_satoshis</td>
-<td>string(int64)</td>
+<td>string</td>
 <td>false</td>
 <td>none</td>
 <td>Value you’re sending/you’ve sent in satoshis.</td>
@@ -19516,7 +19516,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>wait_guarantee</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional If not set, defaults to true, which means the API will wait for Block to guarantee the transaction, using our Confidence Factor. The guarantee usually takes around 8 seconds. If manually set to false, the Microtransaction endpoint will return as soon as the transaction is broadcast.</td>
@@ -19551,7 +19551,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>fees</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Block’s optimally calculated fees for this MicroTX to guarantee swift 99% confirmation, only returned when using from_pubkey. Block pays these fees for the first 8,000 microtransactions, but like regular transactions, it is deducted from the source address thereafter.</td>
@@ -19688,7 +19688,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>block_height</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Height of the block that contains this transaction. If this is an unconfirmed transaction, it will equal -1.</td>
@@ -19709,21 +19709,21 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>total</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The total number of satoshis exchanged in this transaction.</td>
 </tr>
 <tr>
 <td>fees</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The total number of fees—in satoshis—collected by miners in this transaction.</td>
 </tr>
 <tr>
 <td>size</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The size of the transaction in bytes.</td>
@@ -19751,42 +19751,42 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>ver</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Version number, typically 1 for Bitcoin transactions.</td>
 </tr>
 <tr>
 <td>lock_time</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Time when transaction can be valid. Can be interpreted in two ways: if less than 500 million, refers to block height. If more, refers to Unix epoch time.</td>
 </tr>
 <tr>
 <td>double_spend</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>true if this is an attempted double spend; false otherwise.</td>
 </tr>
 <tr>
 <td>vin_sz</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total number of inputs in the transaction.</td>
 </tr>
 <tr>
 <td>vout_sz</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Total number of outputs in the transaction.</td>
 </tr>
 <tr>
 <td>confirmations</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of subsequent blocks, including the block the transaction is in. Unconfirmed transactions have 0 confirmations.</td>
@@ -19807,7 +19807,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>opt_in_rbf</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Returns true if this transaction has opted in to Replace-By-Fee (RBF), either true or not present. You can read more about Opt-In RBF here.</td>
@@ -19828,7 +19828,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>receive_count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Number of peers that have sent this transaction to Block; only present for unconfirmed transactions.</td>
@@ -19849,7 +19849,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>block_index</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Optional Canonical, zero-indexed location of this transaction in a block; only present for confirmed transactions.</td>
@@ -19891,7 +19891,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>includeToSignTx</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>none</td>
@@ -20333,7 +20333,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>aggregated_origin_radius</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>The radius (in meters) of the smallest circle containing the first peer from which we detect this transaction, the average of the first five peers, and the average of the first ten peers. In a general sense, this represents an approximate confidence interval in our calculated aggregated_origin; the smaller the radius, the more confidence in our aggregated_origin assessment.</td>
@@ -20640,7 +20640,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>omitWalletAddresses</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>If omitWalletAddresses is true, the response will omit address information (useful to speed up the API call for larger wallets).</td>
@@ -20715,7 +20715,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>hd</td>
-<td>boolean(boolean)</td>
+<td>boolean</td>
 <td>false</td>
 <td>none</td>
 <td>none</td>
@@ -20828,14 +20828,14 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>count</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of addresses to derive. If not set, default is one address.</td>
 </tr>
 <tr>
 <td>subchain_index</td>
-<td>string(int64)</td>
+<td>string</td>
 <td>false</td>
 <td>none</td>
 <td>Derives address(es) on this specific subchain. If not set, address will be generated on the first chain in the HD wallet.</td>
@@ -21101,7 +21101,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>confirmations</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>optional Used in concert with the tx-confirmation event type to set the number of confirmations desired for which to receive an update. You’ll receive an updated TX for every confirmation up to this amount. The maximum allowed is 10; if not set, it will default to 6.</td>
@@ -21129,7 +21129,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>callback_errors</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of errors when attempting to POST to callback URL; not applicable for WebSockets usage.</td>
@@ -21209,7 +21209,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>confirmations</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>optional Used in concert with the tx-confirmation event type to set the number of confirmations desired for which to receive an update. You’ll receive an updated TX for every confirmation up to this amount. The maximum allowed is 10; if not set, it will default to 6.</td>
@@ -21237,7 +21237,7 @@ ApiKeyAuthInHeader, ApiKeyAuthInQuery
 </tr>
 <tr>
 <td>callback_errors</td>
-<td>integer(int32)</td>
+<td>integer</td>
 <td>false</td>
 <td>none</td>
 <td>Number of errors when attempting to POST to callback URL; not applicable for WebSockets usage.</td>
