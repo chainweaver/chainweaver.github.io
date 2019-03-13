@@ -822,37 +822,72 @@
               
                 <tr>
                   <td>total_received</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Total amount of confirmed wei received by this address. </p></td>
                 </tr>
               
                 <tr>
+                  <td>total_received_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Total amount of confirmed wei received by this address. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>total_sent</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Total amount of confirmed wei sent by this address. </p></td>
                 </tr>
               
                 <tr>
+                  <td>total_sent_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Total amount of confirmed wei sent by this address. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>balance</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Balance of confirmed wei on this address. (i.e., for transactions whose confirmations &gt; 0). </p></td>
                 </tr>
               
                 <tr>
+                  <td>balance_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Balance of confirmed wei on this address. (i.e., for transactions whose confirmations &gt; 0). This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>unconfirmed_balance</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Balance of unconfirmed wei on this address. Can be negative (if unconfirmed transactions are just spending part of an address balance). Only unconfirmed transactions (haven’t made it into a block) are included in this calculation. </p></td>
                 </tr>
               
                 <tr>
+                  <td>unconfirmed_balance_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Balance of unconfirmed wei on this address. Can be negative (if unconfirmed transactions are just spending part of an address balance). Only unconfirmed transactions (haven’t made it into a block) are included in this calculation. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>final_balance</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Total balance of wei, including confirmed and unconfirmed transactions, for this address. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>final_balance_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Total balance of wei, including confirmed and unconfirmed transactions, for this address. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -987,16 +1022,30 @@
               
                 <tr>
                   <td>total</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The total number of wei transacted in this block. </p></td>
                 </tr>
               
                 <tr>
+                  <td>total_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The total number of wei transacted in this block. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>fees</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The total number of fees—in wei—collected by miners in this block. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fees_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The total number of fees—in wei—collected by miners in this block. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1192,23 +1241,44 @@
               
                 <tr>
                   <td>high_gas_price</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>A rolling average of the gas price (in wei) for transactions to be confirmed within 1 to 2 blocks. </p></td>
                 </tr>
               
                 <tr>
+                  <td>high_gas_price_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>A rolling average of the gas price (in wei) for transactions to be confirmed within 1 to 2 blocks. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>medium_gas_price</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>A rolling average of the gas price (in wei) for transactions to be confirmed within 3 to 6 blocks. </p></td>
                 </tr>
               
                 <tr>
+                  <td>medium_gas_price_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>A rolling average of the gas price (in wei) for transactions to be confirmed within 3 to 6 blocks. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>low_gas_price</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>A rolling average of the gas price (in wei) for transactions to be confirmed in 7 or more blocks. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>low_gas_price_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>A rolling average of the gas price (in wei) for transactions to be confirmed in 7 or more blocks. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1271,16 +1341,30 @@
               
                 <tr>
                   <td>gas_limit</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Maximum amount of gas to use in contract creation or method execution. </p></td>
                 </tr>
               
                 <tr>
+                  <td>gas_limit_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Maximum amount of gas to use in contract creation or method execution. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>value</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Amount (in wei) to transfer; can be used when creating a contract or calling a method. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Amount (in wei) to transfer; can be used when creating a contract or calling a method. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1459,7 +1543,14 @@
               
                 <tr>
                   <td>value</td>
-                  <td><a href="#int64">int64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value_hex</td>
+                  <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -1517,16 +1608,30 @@
               
                 <tr>
                   <td>total</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The total number of wei exchanged in this transaction. </p></td>
                 </tr>
               
                 <tr>
+                  <td>total_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The total number of wei exchanged in this transaction. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>fees</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The total number of fees—in wei—collected by miners in this transaction. Equal to gas_price * gas_used. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fees_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The total number of fees—in wei—collected by miners in this transaction. Equal to gas_price * gas_used. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1538,16 +1643,30 @@
               
                 <tr>
                   <td>gas_used</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The amount of gas used by this transaction. </p></td>
                 </tr>
               
                 <tr>
+                  <td>gas_used_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The amount of gas used by this transaction. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>gas_price</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The price of gas—in wei—in this transaction. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gas_price_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The price of gas—in wei—in this transaction. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1636,9 +1755,16 @@
               
                 <tr>
                   <td>gas_limit</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Optional If creating a transaction, can optionally set a higher default gas limit (useful if your recepient is a contract). If not set, default is 21000 gas for external accounts and 80000 for contract accounts. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gas_limit_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Optional If creating a transaction, can optionally set a higher default gas limit (useful if your recepient is a contract). If not set, default is 21000 gas for external accounts and 80000 for contract accounts. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1729,9 +1855,16 @@
               
                 <tr>
                   <td>value</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The value transfered by this input/output in wei exchanged in the enclosing transaction. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The value transfered by this input/output in wei exchanged in the enclosing transaction. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1750,9 +1883,16 @@
               
                 <tr>
                   <td>ref_balance</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Optional The past balance of the parent address the moment this transaction was confirmed. Not present for unconfirmed transactions. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ref_balance_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Optional The past balance of the parent address the moment this transaction was confirmed. Not present for unconfirmed transactions. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -1975,9 +2115,16 @@
               
                 <tr>
                   <td>gas_limit</td>
-                  <td><a href="#int32">int32</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Maximum amount of gas to use in contract creation or method execution. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gas_limit_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Maximum amount of gas to use in contract creation or method execution. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -2156,16 +2303,30 @@
               
                 <tr>
                   <td>gas_limit</td>
-                  <td><a href="#int32">int32</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Maximum amount of gas to use in contract creation or method execution. </p></td>
                 </tr>
               
                 <tr>
+                  <td>gas_limit_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Maximum amount of gas to use in contract creation or method execution. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>value</td>
-                  <td><a href="#int32">int32</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Amount (in wei) to transfer; can be used when creating a contract or calling a method. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Amount (in wei) to transfer; can be used when creating a contract or calling a method. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -2284,16 +2445,30 @@
               
                 <tr>
                   <td>total</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The total number of wei exchanged in this transaction. </p></td>
                 </tr>
               
                 <tr>
+                  <td>total_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The total number of wei exchanged in this transaction. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>fees</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The total number of fees—in wei—collected by miners in this transaction. Equal to gas_price * gas_used. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>fees_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The total number of fees—in wei—collected by miners in this transaction. Equal to gas_price * gas_used. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -2305,16 +2480,30 @@
               
                 <tr>
                   <td>gas_used</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The amount of gas used by this transaction. </p></td>
                 </tr>
               
                 <tr>
+                  <td>gas_used_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The amount of gas used by this transaction. This is a hex string. </p></td>
+                </tr>
+              
+                <tr>
                   <td>gas_price</td>
-                  <td><a href="#uint64">uint64</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>The price of gas—in wei—in this transaction. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gas_price_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>The price of gas—in wei—in this transaction. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
@@ -2403,9 +2592,16 @@
               
                 <tr>
                   <td>gas_limit</td>
-                  <td><a href="#int32">int32</a></td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p>Optional If creating a transaction, can optionally set a higher default gas limit (useful if your recepient is a contract). If not set, default is 21000 gas for external accounts and 80000 for contract accounts. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gas_limit_hex</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Optional If creating a transaction, can optionally set a higher default gas limit (useful if your recepient is a contract). If not set, default is 21000 gas for external accounts and 80000 for contract accounts. This is a hex string. </p></td>
                 </tr>
               
                 <tr>
