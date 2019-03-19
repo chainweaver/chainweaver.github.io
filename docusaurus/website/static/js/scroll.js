@@ -23,9 +23,21 @@ function windowResize() {
     $("canvas")[0].height = $(window).height();
 }
 
-$(".fixedHeaderContainer").addClass("transparent");
+function checkHeight() {
+    if ($("canvas")[0].height < 650) {
+        $("canvas")[0].height = 650;
+    }
+}
+
+function init() {
+    $(".fixedHeaderContainer").addClass("transparent");
+}
+
 $(window).load(function(){
     scrollCallback();
+    checkHeight();
 });
+
+init();
 window.addEventListener('scroll', throttle(scrollCallback, 100));
 window.addEventListener('resize', throttle(windowResize, 100));

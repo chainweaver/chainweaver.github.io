@@ -22,7 +22,9 @@ function Help(props) {
             <h1>Contact</h1>
             <p>Please write down the following items and push "send" button.<br />Please read and accept the "<a href="https://fairway-corp.co.jp/privacy-policy/" target="_blank">Privacy Policy</a>" regarding the handling of personal information.</p>
           </header>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6RJK3N2hsZGAj72WXR1MNIkaX-rFBxaALEGwG85Zmy2s_tA/viewform?embedded=true" width="640" height="1236" frameBorder="0" marginHeight="0" marginWidth="0">読み込んでいます...</iframe>
+          <div class="iframe-wrap">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6RJK3N2hsZGAj72WXR1MNIkaX-rFBxaALEGwG85Zmy2s_tA/viewform?embedded=true" width="640" height="1236" frameBorder="0" marginHeight="0" marginWidth="0">読み込んでいます...</iframe>
+          </div>
         </div>
       </Container>
     </div>

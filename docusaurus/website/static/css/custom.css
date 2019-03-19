@@ -18,7 +18,7 @@
 @media only screen and (min-width: 1500px) {
 }
 
-@media only screen and (max-width: 480) {
+@media (max-width: 480px) {
     .headerTitleWithLogo {
         display: block !important;
     }
@@ -77,4 +77,19 @@ canvas {
 }
 .fixedHeaderContainer {
     background: #1c253a !important;
+}
+.iframe-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 120%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iframe-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
