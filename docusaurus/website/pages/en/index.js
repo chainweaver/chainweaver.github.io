@@ -9,46 +9,14 @@ const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
 
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
+// const Showcase = require(`${process.cwd()}/core/Showcase.js`);
+const translate = require('../../server/translate.js').translate;
 
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
-    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
-
-    const SplashContainer = props => (
-      <div className="homeContainer">
-        <div className="homeSplashFade">
-          <div className="wrapper homeWrapper">{props.children}</div>
-        </div>
-      </div>
-    );
-
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
-      </div>
-    );
-
-    const ProjectTitle = () => (
-      <h2 className="projectTitle">
-        {siteConfig.title}
-        <small>{siteConfig.tagline}</small>
-      </h2>
-    );
-
-    const PromoSection = props => (
-      <div className="section promoSection">
-        <div className="promoRow">
-          <div className="pluginRowBlock">{props.children}</div>
-        </div>
-      </div>
-    );
+    const {siteConfig, language} = this.props;
 
     const Button = props => (
       <div className="pluginWrapper buttonWrapper">
@@ -59,146 +27,178 @@ class HomeSplash extends React.Component {
     );
 
     return (
-      <SplashContainer>
-        <Logo img_src={`${baseUrl}img/docusaurus.svg`} />
-        <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
-          </PromoSection>
+      <div className="homeContainer">
+        <div className="homeSplashFade">
+          <div className="title">
+            <h1>chainweaver</h1>
+            <h3>for all blockchain developers</h3>
+            <p>for all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developers</p>
+            <div className="pluginRowBlock">
+              <Button
+                href={`
+                  ${siteConfig.baseUrl}docs/${language}/installation
+                  `}>
+                <translate>Get Started</translate>
+              </Button>
+              <Button href="https://github.com/facebook/Docusaurus">
+                <translate>GitHub</translate>
+              </Button>
+            </div>
+          </div>
         </div>
-      </SplashContainer>
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/particle.js"></script>
+        <script src="/js/scroll.js"></script>
+      </div>
     );
   }
 }
 
 class Index extends React.Component {
+  // componentDidMount() {
+  //   const script = document.createElement("script");
+  //   script.src = `${siteConfig.baseUrl}/js/jquery-2.2.4.min.js`;
+  //   script.async = true;
+  //   document.body.appendChild(script);
+
+  //   const script2 = document.createElement("script");
+  //   script2.src = `${siteConfig.baseUrl}/js/particle.js`;
+  //   script2.async = true;
+  //   document.body.appendChild(script2);
+
+    // const particleCanvas = document.getElementsByTagName("canvas");
+    // document.body.insertBefore(particleCanvas[0], document.body.firstChild);
+  // }
+
   render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
-
-    const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
-      </Container>
-    );
-
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
-
-    const TryOut = () => (
-      <Block id="try">
-        {[
-          {
-            content: 'Talk about trying this out',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'left',
-            title: 'Try it Out',
-          },
-        ]}
-      </Block>
-    );
-
-    const Description = () => (
-      <Block background="dark">
-        {[
-          {
-            content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
-        ]}
-      </Block>
-    );
-
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content: 'Talk about learning how to use this',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'right',
-            title: 'Learn How',
-          },
-        ]}
-      </Block>
-    );
-
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
-        ]}
-      </Block>
-    );
-
-    const Showcase = () => {
-      if ((siteConfig.users || []).length === 0) {
-        return null;
-      }
-
-      const showcase = siteConfig.users
-        .filter(user => user.pinned)
-        .map(user => (
-          <a href={user.infoLink} key={user.infoLink}>
-            <img src={user.image} alt={user.caption} title={user.caption} />
-          </a>
-        ));
-
-      const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
-
-      return (
-        <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
-          <p>This project is used by all these people</p>
-          <div className="logos">{showcase}</div>
-          <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
-              More {siteConfig.title} Users
-            </a>
-          </div>
-        </div>
-      );
-    };
+    const {config: siteConfig, language = 'en'} = this.props;
+    // const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
 
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
+        {/* <div className="title">
+          <h1>chainweaver</h1>
+          <h3>for all blockchain developers</h3>
+        </div> */}
+        {/* <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/particle.js"></script> */}
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
+          <Container padding={['bottom', 'top']} background="light">
+            <h2 className="subTitle">Common business use cases</h2>
+            <GridBlock
+              align="center"
+              contents={[
+                {
+                  content: `Keep an immutable history of business processes.`,
+                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  imageAlign: 'top',
+                  imageAlt: 'Audit trail for a business process',
+                  title: <translate>Audit trail for a business process</translate>,
+                },
+                {
+                  content: `Add a blockchain timestamp proof to digital documents and data.`,
+                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  imageAlign: 'top',
+                  imageAlt: 'Document timestamping',
+                  title: <translate>Document timestamping</translate>,
+                }
+              ]}
+              layout="twoColumn"
+            />
+            <br />
+            <br />
+            <GridBlock
+              align="center"
+              contents={[
+                {
+                  content: `Prove the existence and accuracy of accounting records.`,
+                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  imageAlign: 'top',
+                  imageAlt: 'Data integrity for accounting records',
+                  title: <translate>Data integrity for accounting records</translate>,
+                },
+                {
+                  content: `Prove to regulators that your data and documents haven't been altered`,
+                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  imageAlign: 'top',
+                  imageAlt: 'Regulatory compliance',
+                  title: <translate>Regulatory compliance</translate>,
+                },
+              ]}
+              layout="twoColumn"
+            />
+          </Container>
+          <Container padding={['bottom', 'top']}>
+            <GridBlock
+              contents={[
+                {
+                  content: `Distributed ledger technology has been a hot topic in the industry for many years.
+                  So why is that action so limited? No one knows where to start.
+                  chainweaver changes it!`,
+                  imageAlign: 'right',
+                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  imageAlt: 'Docusaurus on a Scooter',
+                  title: '',
+                },
+              ]}
+              layout="twoColumn"
+            />
+          </Container>
+          <Container padding={['bottom', 'top']} background="light">
+            <GridBlock
+              contents={[
+                {
+                  content: `Distributed ledger technology has been a hot topic in the industry for many years.
+                  So why is that action so limited? No one knows where to start.
+                  chainweaver changes it!`,
+                  imageAlign: 'left',
+                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  imageAlt: 'Docusaurus Demo',
+                  title: '',
+                },
+              ]}
+              layout="twoColumn"
+            />
+          </Container>
+          <div className="testimonials">
+            <Container padding={['bottom', 'top']}>
+              <h2 className="subTitle">For developers</h2>
+              <GridBlock
+                align="center"
+                contents={[
+                  {
+                    content:
+                      "Simple and easy web APIs (REST) enable developers to build blockchain applications quickly and confidently.",
+                    image: `${siteConfig.baseUrl}img/dummy.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'REST API',
+                    title:
+                      'REST API',
+                  },
+                  {
+                    content:
+                      'We host full-node blockchains for optimal security in validating and relaying transactions.',
+                    image: `${siteConfig.baseUrl}img/dummy.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'Hosted Full Blockchain Nodes',
+                    title:
+                      'Hosted Full Blockchain Nodes',
+                  },
+                  {
+                    content:
+                      '*Docusaurus has been a great choice for the ReasonML family of projects. It makes our documentation consistent, i18n-friendly, easy to maintain, and friendly for new contributors.*',
+                    image: `${siteConfig.baseUrl}img/dummy.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'Ricky Vetter',
+                    title:
+                      'Ricky Vetter <br/><font size="2">ReasonReact Developer</font>',
+                  },
+                ]}
+                layout="threeColumn"
+              />
+            </Container>
+          </div>
         </div>
       </div>
     );

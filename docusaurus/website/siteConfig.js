@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'chainweaver', // Title for your website.
-  tagline: 'A website for chainweaver',
+  tagline: 'for all blockchain developers',
   url: 'https://chainweaver.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -39,9 +39,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'doc4', label: 'API'}
   ],
 
   // If you have users set above, you add it here:
@@ -54,8 +52,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#20232a',
-    secondaryColor: '#205C3B',
+    primaryColor: '#1c253a',
+    secondaryColor: '#1c253a',
   },
 
   /* Custom fonts for website */
@@ -73,7 +71,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} FAIRWAY CORPORATION`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
