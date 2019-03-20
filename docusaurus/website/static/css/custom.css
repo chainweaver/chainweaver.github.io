@@ -25,7 +25,7 @@
 }
 
 .container a {
-    color: #1565c0 !important;
+    color: #5BC0BE !important;
 }
 
 .homeContainer {
@@ -36,7 +36,7 @@
 }
 .homeSplashFade,
 footer {
-    background: #1c253a !important;
+    background: #1C2541 !important;
     color: white;
 }
 footer {
@@ -60,25 +60,49 @@ canvas {
     border-radius: 5px;
     margin: 5px;
 }
+.title .button:hover {
+    background-color: #3A506B;
+    border-color: #3A506B;
+}
 .title .pluginRowBlock {
     display: flex;
     justify-content: center;
 }
 
+.mainContainer .buttonWrapper .button {
+    background-color: #1C2541;
+    color: white !important;
+    margin: 5px;
+}
+.mainContainer .buttonWrapper .button:hover {
+    background-color: #3A506B;
+    border-color: #3A506B;
+    color: white !important;
+}
+
+/* .mainContainer .button {
+    border: 1px solid #1C2541;
+    border-radius: 5px;
+    margin: 5px;
+}
+.mainContainer .buttonWrapper > a:hover {
+    color: white !important;
+} */
+
 .nav-site.nav-site-internal.transparent {
-    background: #1c253acc !important;
+    background: #1C2541cc !important;
 }
 .nav-site.nav-site-internal {
-    background: #1c253a !important;
+    background: #1C2541 !important;
 }
 
 .fixedHeaderContainer.transparent {
-    background: #1c253acc !important;
+    background: #1C2541cc !important;
 }
 .fixedHeaderContainer {
-    background: #1c253a !important;
+    background: #1C2541 !important;
 }
-.iframe-wrap {
+/* .iframe-wrap {
     position: relative;
     width: 100%;
     height: 0;
@@ -92,4 +116,4 @@ canvas {
     left: 0;
     height: 100%;
     width: 100%;
-}
+} */

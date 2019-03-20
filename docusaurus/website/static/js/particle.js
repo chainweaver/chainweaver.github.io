@@ -129,7 +129,7 @@ function popolate(num) {
 }
 
 function clear() {
-  canvas.fillStyle = '#1c253a';
+  canvas.fillStyle = '#1C2541';
   canvas.fillRect(0, 0, tela.width, tela.height);
 }
 
