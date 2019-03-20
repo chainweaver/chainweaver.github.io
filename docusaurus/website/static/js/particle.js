@@ -54,7 +54,7 @@ class Particle {
   render() {
     let lineWidth = 0.2 + 3.8 * this.random;
     let color = this.color;
-    this.createArcFill(this.radius, color);
+    // this.createArcFill(this.radius, color);
     this.createArcEmpty(this.radius + lineWidth, lineWidth / 2, color);
   }
 

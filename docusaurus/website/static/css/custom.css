@@ -22,6 +22,15 @@
     .headerTitleWithLogo {
         display: block !important;
     }
+    .title h1 {
+        font-size: 40px !important;
+    }
+    .title h3 {
+        width: 80% !important;
+    }
+    .title > p {
+        width: 80% !important;
+    }
 }
 
 .container a {

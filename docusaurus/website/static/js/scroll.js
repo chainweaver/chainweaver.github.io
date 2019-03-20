@@ -41,3 +41,4 @@ $(window).load(function(){
 init();
 window.addEventListener('scroll', throttle(scrollCallback, 100));
 window.addEventListener('resize', throttle(windowResize, 100));
+window.addEventListener("orientationchange", checkHeight());
