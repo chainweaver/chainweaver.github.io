@@ -12,7 +12,7 @@ const translate = require('../../server/translate.js').translate;
 
 const Container = CompLibrary.Container;
 
-function Help(props) {
+function Contact(props) {
   const {config: siteConfig, language = ''} = props;
 
   const Button = props => (
@@ -25,7 +25,7 @@ function Help(props) {
 
   return (
     <div className="docMainWrapper wrapper">
-      <Container className="mainContainer">
+      <Container className="mainContainer contact">
         <div className="showcaseSection">
           <header className="postHeader">
             <h1><translate>Contact</translate></h1>
@@ -41,4 +41,4 @@ function Help(props) {
   );
 }
 
-module.exports = Help;
+module.exports = Contact;
