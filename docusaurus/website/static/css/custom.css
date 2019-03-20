@@ -22,6 +22,9 @@
     .headerTitleWithLogo {
         display: block !important;
     }
+    .title {
+        top: 330px !important;
+    }
     .title h1 {
         font-size: 40px !important;
     }
