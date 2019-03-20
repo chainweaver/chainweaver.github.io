@@ -36,13 +36,13 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
+            <h5>ドキュメント</h5>
             <a href="/openapi/v0/eth.html" target="_blank">
-              API Reference (for Ethereum)
+              API リファレンス (for Ethereum)
             </a>
           </div>
           <div>
-            <h5>Community</h5>
+            <h5>コミュニティ</h5>
             <a
               href="https://stackoverflow.com/questions/tagged/chainweaver"
               target="_blank"
@@ -52,8 +52,7 @@ class Footer extends React.Component {
             <a href="https://github.com/chainweaver" target="_blank">GitHub</a>
           </div>
           <div>
-            <h5>Contact</h5>
-            <a href="/contact">Contact us</a>
+            <a href="/contact">お問い合わせ</a>
           </div>
         </section>
 
