@@ -2,11 +2,10 @@
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
-    "build": "docusaurus-build && cp static/index.html build/chainweaver.github.io/",
+    "build": "docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
-    "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version"
+    "version": "docusaurus-version"
   },
   "devDependencies": {
     "docusaurus": "^1.7.2"
