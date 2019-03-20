@@ -8,7 +8,6 @@
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
-const translate = require('../../server/translate.js').translate;
 
 const Container = CompLibrary.Container;
 
@@ -28,12 +27,12 @@ function Contact(props) {
       <Container className="mainContainer contact">
         <div className="showcaseSection">
           <header className="postHeader">
-            <h1><translate>Contact</translate></h1>
-            <p>Please read and accept the "<a href="https://fairway-corp.co.jp/en/privacy-policy/" target="_blank">Privacy Policy</a>" regarding the handling of personal information.<br />If you agree, please click the "Contact us" button below.</p>
+            <h1>お問い合わせ</h1>
+            <p>個人情報の取扱いについては、「<a href="https://fairway-corp.co.jp/privacy-policy/" target="_blank">個人情報保護方針</a>」をよく読み、同意してください。<br />同意された上で下記の「お問い合わせフォーム」ボタンをクリックしてください。</p>
           </header>
 
           <Button href="https://forms.gle/7xg6d5jKq5YMvf616" target="_blank">
-            <translate>Contact us</translate>
+            お問い合わせフォーム
           </Button>
         </div>
       </Container>
