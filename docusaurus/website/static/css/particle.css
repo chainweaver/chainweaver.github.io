@@ -32,10 +32,30 @@
 .title h3 {
   font-weight: 200;
   font-size: 20px;
-  padding: 0;
-  margin: 0;
+  padding: 1rem;
+  margin: 0 auto;
   line-height: 1;
   color: #eee;
   letter-spacing: 2px;
   text-shadow: 0 0 30px #000155;
+  width: 70%;
+}
+.title > p {
+  margin: 3rem auto;
+  color: white;
+  width: 50%;
+}
+.title .button {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 5px;
+}
+.title .button:hover {
+  background-color: #3A506B;
+  border-color: #3A506B;
+}
+.title .pluginRowBlock {
+  display: flex;
+  justify-content: center;
 }

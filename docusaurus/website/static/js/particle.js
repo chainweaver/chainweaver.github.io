@@ -1,6 +1,6 @@
-let max_particles = 300;
+let max_particles = 200;
 let particles = [];
-let frequency = 100;
+let frequency = 30;
 let init_num = max_particles;
 let max_time = frequency * max_particles;
 let time_to_recreate = false;
@@ -52,21 +52,10 @@ class Particle {
   }
 
   render() {
-    // Create arc
     let lineWidth = 0.2 + 3.8 * this.random;
     let color = this.color;
-    switch (this.type) {
-      case "full":
-        this.createArcFill(this.radius, color);
-        this.createArcEmpty(this.radius + lineWidth, lineWidth / 2, color);
-        break;
-      case "fill":
-        this.createArcFill(this.radius, color);
-        break;
-      case "empty":
-        this.createArcEmpty(this.radius, lineWidth, color);
-        break;}
-
+    this.createArcFill(this.radius, color);
+    this.createArcEmpty(this.radius + lineWidth, lineWidth / 2, color);
   }
 
   createArcFill(radius, color) {
@@ -83,7 +72,7 @@ class Particle {
     this.canvas.lineWidth = lineWidth;
     this.canvas.strokeStyle = color;
     this.canvas.stroke();
-    this.canvas.closePath();
+    // this.canvas.closePath();
   }
 
   move() {
@@ -109,17 +98,11 @@ class Particle {
   }
 }
 
-
-/*
-* Function to clear layer canvas
-* @num:number number of particles
-*/
 function popolate(num) {
   for (var i = 0; i < num; i++) {
     setTimeout(
     function (x) {
       return function () {
-        // Add particle
         particles.push(new Particle(canvas));
       };
     }(i),
@@ -142,7 +125,7 @@ function connection() {
       canvas.beginPath();
       canvas.moveTo(box1.x, box1.y);
       canvas.lineTo(box2.x, box2.y);
-      canvas.lineWidth = 0.45;
+      canvas.lineWidth = 0.6;
       canvas.strokeStyle = "#3f47ff";
       canvas.stroke();
       canvas.closePath();
