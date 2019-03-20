@@ -39,11 +39,14 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'}
+    {doc: 'doc4', label: 'API'},
+    {href: 'https://github.com/chainweaver', label: 'GitHub'},
+    {languages: true},
+    // {search: true},
   ],
 
   // If you have users set above, you add it here:
-  users,
+  // users,
 
   /* path to images for header/footer */
   headerIcon: 'img/logo-only-white.png',
@@ -99,6 +102,13 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+  // algolia: {
+  //   apiKey: 'my-api-key',
+  //   indexName: 'my-index-name',
+  //   algoliaOptions: {
+  //     facetFilters: [ "language:LANGUAGE", "version:VERSION" ]
+  //   }
+  // },
 };
 
 module.exports = siteConfig;
