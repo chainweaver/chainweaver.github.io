@@ -15,23 +15,26 @@ const Container = CompLibrary.Container;
 function Help(props) {
   const {config: siteConfig, language = ''} = props;
 
+  const Button = props => (
+    <div className="pluginWrapper buttonWrapper">
+      <a className="button" href={props.href} target={props.target}>
+        {props.children}
+      </a>
+    </div>
+  );
+
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer">
         <div className="showcaseSection">
           <header className="postHeader">
             <h1><translate>Contact</translate></h1>
-            <p>Please write down the following items and push "send" button.<br />Please read and accept the "<a href="https://fairway-corp.co.jp/en/privacy-policy/" target="_blank">Privacy Policy</a>" regarding the handling of personal information.</p>
+            <p>Please read and accept the "<a href="https://fairway-corp.co.jp/en/privacy-policy/" target="_blank">Privacy Policy</a>" regarding the handling of personal information.<br />If you agree, please click the "Contact us" button below.</p>
           </header>
-          <div className="iframe-wrap">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe6RJK3N2hsZGAj72WXR1MNIkaX-rFBxaALEGwG85Zmy2s_tA/viewform?embedded=true"
-              width="640"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-            >読み込んでいます...</iframe>
-          </div>
+
+          <Button href="https://forms.gle/7xg6d5jKq5YMvf616" target="_blank">
+            <translate>Contact us</translate>
+          </Button>
         </div>
       </Container>
     </div>
