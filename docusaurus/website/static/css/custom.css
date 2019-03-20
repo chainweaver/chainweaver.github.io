@@ -50,6 +50,9 @@ canvas {
     text-align: center;
 }
 
+.container p {
+    text-align: center;
+}
 .mainContainer .buttonWrapper .button {
     background-color: #1C2541;
     color: white !important;

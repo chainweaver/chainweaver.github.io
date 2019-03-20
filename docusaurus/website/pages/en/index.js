@@ -31,14 +31,14 @@ class HomeSplash extends React.Component {
         <div className="homeSplashFade">
           <div className="title">
             <h1>chainweaver</h1>
-            <h3>for all blockchain developers</h3>
-            <p>for all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developersfor all blockchain developers</p>
+            <h3>ブロックチェーン開発者の為のクラウドAPIサービス</h3>
+            <p>Chainweaverはブロックチェーン技術をアプリケーションやビジネスへ容易に組み込むことのできるクラウドAPIサービスです。わずかなコードでアプリケーションに組み込むことを可能にし、あなたのビジネスにブロックチェーン技術を即座に導入できます。</p>
             <div className="pluginRowBlock">
               <Button
                 href={`
                   ${siteConfig.baseUrl}docs/${language}/installation
                   `}>
-                <translate>Get Started</translate>
+                開発者登録をする
               </Button>
             </div>
           </div>
@@ -52,81 +52,38 @@ class HomeSplash extends React.Component {
 }
 
 class Index extends React.Component {
-  // componentDidMount() {
-  //   const script = document.createElement("script");
-  //   script.src = `${siteConfig.baseUrl}/js/jquery-2.2.4.min.js`;
-  //   script.async = true;
-  //   document.body.appendChild(script);
-
-  //   const script2 = document.createElement("script");
-  //   script2.src = `${siteConfig.baseUrl}/js/particle.js`;
-  //   script2.async = true;
-  //   document.body.appendChild(script2);
-
-    // const particleCanvas = document.getElementsByTagName("canvas");
-    // document.body.insertBefore(particleCanvas[0], document.body.firstChild);
-  // }
-
   render() {
     const {config: siteConfig, language = 'en'} = this.props;
-    // const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
 
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
-        {/* <div className="title">
-          <h1>chainweaver</h1>
-          <h3>for all blockchain developers</h3>
-        </div> */}
-        {/* <script src="/js/jquery-2.2.4.min.js"></script>
-        <script src="/js/particle.js"></script> */}
         <div className="mainContainer">
           <Container padding={['bottom', 'top']} background="light">
-            <h2 className="subTitle">Common business use cases</h2>
+            <h2 className="subTitle">ブロックチェーン技術をもっとビジネスへ</h2>
+            <p>ブロックチェーンの活用事例はまだまだ少ないですが、日々様々な企業がビジネスに取り込んでいます。</p>
             <GridBlock
               align="center"
               contents={[
                 {
-                  content: `Keep an immutable history of business processes.`,
+                  content: `ブロックチェーンによって、使用されている製品や材料の追跡や検索が簡単にできるようになり、品質や安全性の保証として役立てることができます。「改ざんが難しい」「データ変更者が明確になる」というブロックチェーンの特性を利用して、食品や製造業のトレーサビリティの信頼性を高めることが可能です。畜産農家から解体業者、加工業者といった各々の工程において、「誰が育てたか」「誰がいつ解体したか」「誰がいつ加工したか」といったデータを改ざんできないかたちで記録するとともに、消費者は小売店に並ぶまでの流通経路を容易に追跡できます。                  `,
                   image: `${siteConfig.baseUrl}img/dummy.svg`,
                   imageAlign: 'top',
                   imageAlt: 'Audit trail for a business process',
-                  title: <translate>Audit trail for a business process</translate>,
+                  title: 'サプライチェーンでのトレーサビリティ',
                 },
                 {
-                  content: `Add a blockchain timestamp proof to digital documents and data.`,
+                  content: `複数の買い手が見込まれる「価値あるもの」を発行する際に、その「価値あるもの」が本物であり、かつ売り手が二度売りできないものと全ての買い手が信用でき、なおかつそれらが可視化されていれば、買い手の間ではオープンで透明性の高い競争となると同時、売り手はより高い価格で売却することができます。`,
                   image: `${siteConfig.baseUrl}img/dummy.svg`,
                   imageAlign: 'top',
                   imageAlt: 'Document timestamping',
-                  title: <translate>Document timestamping</translate>,
+                  title: '自律分散型マーケットプレイス',
                 }
               ]}
               layout="twoColumn"
             />
-            <br />
-            <br />
-            <GridBlock
-              align="center"
-              contents={[
-                {
-                  content: `Prove the existence and accuracy of accounting records.`,
-                  image: `${siteConfig.baseUrl}img/dummy.svg`,
-                  imageAlign: 'top',
-                  imageAlt: 'Data integrity for accounting records',
-                  title: <translate>Data integrity for accounting records</translate>,
-                },
-                {
-                  content: `Prove to regulators that your data and documents haven't been altered`,
-                  image: `${siteConfig.baseUrl}img/dummy.svg`,
-                  imageAlign: 'top',
-                  imageAlt: 'Regulatory compliance',
-                  title: <translate>Regulatory compliance</translate>,
-                },
-              ]}
-              layout="twoColumn"
-            />
           </Container>
-          <Container padding={['bottom', 'top']}>
+          {/* <Container padding={['bottom', 'top']}>
             <GridBlock
               contents={[
                 {
@@ -157,39 +114,39 @@ class Index extends React.Component {
               ]}
               layout="twoColumn"
             />
-          </Container>
+          </Container> */}
           <div className="testimonials">
             <Container padding={['bottom', 'top']}>
-              <h2 className="subTitle">For developers</h2>
+              <h2 className="subTitle">Chainweaverの特徴</h2>
               <GridBlock
                 align="center"
                 contents={[
                   {
                     content:
-                      "Simple and easy web APIs (REST) enable developers to build blockchain applications quickly and confidently.",
+                      "世界中で利用されているBlockcypher互換のREST APIを提供しています。これによりBlockcypherを利用して開発された部分はChainweaverに簡単に移行する事が可能です。",
                     image: `${siteConfig.baseUrl}img/dummy.svg`,
                     imageAlign: 'top',
                     imageAlt: 'REST API',
                     title:
-                      'REST API',
+                      'Blockcypher互換のREST API',
                   },
                   {
                     content:
-                      'We host full-node blockchains for optimal security in validating and relaying transactions.',
+                      '最適なセキュリティ、パフォーマンス、アベイラビリティのために、フルノードブロックチェーンをホストしています。',
                     image: `${siteConfig.baseUrl}img/dummy.svg`,
                     imageAlign: 'top',
-                    imageAlt: 'Hosted Full Blockchain Nodes',
+                    imageAlt: 'フルノードをホスト',
                     title:
-                      'Hosted Full Blockchain Nodes',
+                      'フルノードをホスト',
                   },
                   {
                     content:
-                      '*Docusaurus has been a great choice for the ReasonML family of projects. It makes our documentation consistent, i18n-friendly, easy to maintain, and friendly for new contributors.*',
+                      '実際のブロックチェーンと接続するコアの部分は基本的にオープンソース（Apache License 2.0）で提供しています。',
                     image: `${siteConfig.baseUrl}img/dummy.svg`,
                     imageAlign: 'top',
-                    imageAlt: 'OpenSource',
+                    imageAlt: 'オープンソース',
                     title:
-                      'OpenSource',
+                      'オープンソース',
                   },
                 ]}
                 layout="threeColumn"
