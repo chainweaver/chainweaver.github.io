@@ -42,7 +42,7 @@ class HomeSplash extends React.Component {
         </div>
         <script src="/js/jquery-2.2.4.min.js"></script>
         <script src="/js/particle.js"></script>
-        <script src="/js/scroll.js"></script>
+        <script src="/js/custom.js"></script>
       </div>
     );
   }
