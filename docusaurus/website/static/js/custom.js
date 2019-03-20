@@ -21,6 +21,7 @@ function throttle(fn, wait) {
 function windowResize() {
     $("canvas")[0].width = $(window).width();
     $("canvas")[0].height = $(window).height();
+    checkHeight();
 }
 
 function checkHeight() {
@@ -41,4 +42,4 @@ $(window).load(function(){
 init();
 window.addEventListener('scroll', throttle(scrollCallback, 100));
 window.addEventListener('resize', throttle(windowResize, 100));
-window.addEventListener("orientationchange", checkHeight());
+
