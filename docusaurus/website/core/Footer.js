@@ -37,7 +37,7 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href="https://chainweaver.io/openapi/v0/eth.html" target="_blank">
+            <a href="/openapi/v0/eth.html" target="_blank">
               API Reference (for Ethereum)
             </a>
           </div>
