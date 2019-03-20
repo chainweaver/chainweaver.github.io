@@ -28,7 +28,7 @@ function Contact(props) {
         <div className="showcaseSection">
           <header className="postHeader">
             <h1>お問い合わせ</h1>
-            <p>個人情報の取扱いについては、「<a href="https://fairway-corp.co.jp/privacy-policy/" target="_blank">個人情報保護方針</a>」をよく読み、同意してください。<br />同意された上で下記の「お問い合わせフォーム」ボタンをクリックしてください。</p>
+            <p>個人情報の取扱いについては<a href="https://fairway-corp.co.jp/privacy-policy/" target="_blank">個人情報保護方針</a>をよく読み、同意してください。<br />同意された上で下記の「お問い合わせフォーム」ボタンをクリックしてください。</p>
           </header>
 
           <Button href="https://forms.gle/7xg6d5jKq5YMvf616" target="_blank">

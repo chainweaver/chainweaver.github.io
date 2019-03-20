@@ -38,7 +38,7 @@ function Api(props) {
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
           <header className="postHeader">
-            <h1>API Reference</h1>
+            <h1>API リファレンス</h1>
           </header>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>

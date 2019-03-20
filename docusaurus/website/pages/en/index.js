@@ -34,10 +34,7 @@ class HomeSplash extends React.Component {
             <h3>ブロックチェーン開発者の為のクラウドAPIサービス</h3>
             <p>Chainweaverはブロックチェーン技術をアプリケーションやビジネスへ容易に組み込むことのできるクラウドAPIサービスです。わずかなコードでアプリケーションに組み込むことを可能にし、あなたのビジネスにブロックチェーン技術を即座に導入できます。</p>
             <div className="pluginRowBlock">
-              <Button
-                href={`
-                  ${siteConfig.baseUrl}docs/${language}/installation
-                  `}>
+              <Button href="">
                 開発者登録をする
               </Button>
             </div>
