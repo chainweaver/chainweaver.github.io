@@ -80,14 +80,9 @@ canvas {
     color: white !important;
 }
 
-/* .mainContainer .button {
-    border: 1px solid #1C2541;
-    border-radius: 5px;
-    margin: 5px;
+.mainContainer.contact {
+    margin-bottom: 3rem;
 }
-.mainContainer .buttonWrapper > a:hover {
-    color: white !important;
-} */
 
 .nav-site.nav-site-internal.transparent {
     background: #1C2541cc !important;
