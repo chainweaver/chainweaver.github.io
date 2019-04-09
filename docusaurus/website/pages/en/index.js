@@ -114,6 +114,45 @@ class Index extends React.Component {
           </Container> */}
           <div className="testimonials">
             <Container padding={['bottom', 'top']}>
+              <h2 className="subTitle">対応プラットフォーム</h2>
+              <GridBlock
+                align="center"
+                contents={[
+                  {
+                    image: `${siteConfig.baseUrl}img/bitcoin-logo.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'Bitcoin',
+                    title:
+                      'Bitcoin<br />(開発中)',
+                  },
+                  {
+                    image: `${siteConfig.baseUrl}img/bitcoin-cash-logo.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'Bitcoin Cash',
+                    title:
+                      'Bitcoin Cash<br />(開発中)',
+                  },
+                  {
+                    image: `${siteConfig.baseUrl}img/neo-logo.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'NEO',
+                    title:
+                      'NEO<br />(開発中)',
+                  },
+                  {
+                    image: `${siteConfig.baseUrl}img/ethereum.svg`,
+                    imageAlign: 'top',
+                    imageAlt: 'Ethereum',
+                    title:
+                      'Ethereum',
+                  },
+                ]}
+                layout="fourColumn"
+              />
+            </Container>
+          </div>
+          <div className="testimonials">
+            <Container padding={['bottom', 'top']} background="light">
               <h2 className="subTitle">Chainweaverの特徴</h2>
               <GridBlock
                 align="center"
