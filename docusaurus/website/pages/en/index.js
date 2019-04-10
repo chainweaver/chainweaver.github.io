@@ -64,14 +64,14 @@ class Index extends React.Component {
               contents={[
                 {
                   content: `ブロックチェーンによって、使用されている製品や材料の追跡や検索が簡単にできるようになり、品質や安全性の保証として役立てることができます。「改ざんが難しい」「データ変更者が明確になる」というブロックチェーンの特性を利用して、食品や製造業のトレーサビリティの信頼性を高めることが可能です。畜産農家から解体業者、加工業者といった各々の工程において、「誰が育てたか」「誰がいつ解体したか」「誰がいつ加工したか」といったデータを改ざんできないかたちで記録するとともに、消費者は小売店に並ぶまでの流通経路を容易に追跡できます。                  `,
-                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  image: `${siteConfig.baseUrl}img/trace-icon.png`,
                   imageAlign: 'top',
                   imageAlt: 'Audit trail for a business process',
                   title: 'サプライチェーンでのトレーサビリティ',
                 },
                 {
                   content: `複数の買い手が見込まれる「価値あるもの」を発行する際に、その「価値あるもの」が本物であり、かつ売り手が二度売りできないものと全ての買い手が信用でき、なおかつそれらが可視化されていれば、買い手の間ではオープンで透明性の高い競争となると同時、売り手はより高い価格で売却することができます。`,
-                  image: `${siteConfig.baseUrl}img/dummy.svg`,
+                  image: `${siteConfig.baseUrl}img/warranty-icon.png`,
                   imageAlign: 'top',
                   imageAlt: 'Document timestamping',
                   title: '自律分散型マーケットプレイス',
@@ -160,7 +160,7 @@ class Index extends React.Component {
                   {
                     content:
                       "世界中で利用されているBlockcypher互換のREST APIを提供しています。これによりBlockcypherを利用して開発された部分はChainweaverに簡単に移行する事が可能です。",
-                    image: `${siteConfig.baseUrl}img/dummy.svg`,
+                    image: `${siteConfig.baseUrl}img/api-icon.png`,
                     imageAlign: 'top',
                     imageAlt: 'REST API',
                     title:
@@ -169,7 +169,7 @@ class Index extends React.Component {
                   {
                     content:
                       '最適なセキュリティ、パフォーマンス、アベイラビリティのために、フルノードブロックチェーンをホストしています。',
-                    image: `${siteConfig.baseUrl}img/dummy.svg`,
+                    image: `${siteConfig.baseUrl}img/server-icon.png`,
                     imageAlign: 'top',
                     imageAlt: 'フルノードをホスト',
                     title:
@@ -178,7 +178,7 @@ class Index extends React.Component {
                   {
                     content:
                       '実際のブロックチェーンと接続するコアの部分は基本的にオープンソース（Apache License 2.0）で提供しています。',
-                    image: `${siteConfig.baseUrl}img/dummy.svg`,
+                    image: `${siteConfig.baseUrl}img/opensource-icon.png`,
                     imageAlign: 'top',
                     imageAlt: 'オープンソース',
                     title:

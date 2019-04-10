@@ -56,7 +56,7 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">{this.props.config.copyright}. We use <a href="https://icons8.jp/" target="_blank">icons8.</a></section>
       </footer>
     );
   }
